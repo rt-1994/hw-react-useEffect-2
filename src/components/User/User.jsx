@@ -7,7 +7,7 @@ const User = () => {
     const [user, setUser] = useState(null)
     const [name, setName] = useState("")
     const [picture, setPicture] = useState("")
-    const [status, setStatus] = useState(300)
+    const [status, setStatus] = useState(false)
 
 
 
@@ -15,9 +15,7 @@ const User = () => {
 
             const response = await fetch("https://randomuser.me/api/?results=1")
                 .then(response => {
-
                     if(response.status >= 200 && response.status < 300){
-                        setStatus(true)
                         return  response.json()
                     }
                 });
@@ -25,18 +23,17 @@ const User = () => {
             setUser(data)
             setName(data.name.first)
             setPicture(data.picture.large)
-
-
+            setStatus(true)
     }
 
     useEffect(() => {
         setTimeout(function timer (){
             loadData()
-            setStatus(300)
+            setStatus(false)
             setTimeout(()=>{
                 timer()
-            },3000)
-        },3000)
+            },5000)
+        },5000)
     }, [])
 
     return (
