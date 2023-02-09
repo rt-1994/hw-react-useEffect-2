@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "MarckScript";
+  src: url("../../assets/fonts/MarckScript-Regular.ttf");
+  font-style: italic;
+}
+
+
+.clock{
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient( #E09898 0%, #C86AD0 100%);
+}
+
+.clock-frame{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px #000 solid;
+  position: relative;
+  background: #f1efef;
+  box-shadow: 0px 0px 10px 5px #C1BABA;
+}
+
+.center{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #a10707;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.houre{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 70px;
+  width: 7px;
+  background: #000;
+  transform-origin: 0 0;
+  border-radius: 3px;
+}
+
+.minute{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 90px;
+  width: 7px;
+  background: #000;
+  transform-origin: 0 0;
+  border-radius: 3px;
+}
+
+.second{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 4px;
+  background: #a10707;
+  transform-origin: 0 0;
+  border-radius: 2px;
+
+}
+
+.numbers{
+  list-style: none;
+  font-family: "MarckScript";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+
+  li{
+    position: absolute;
+  }
+
+  li:nth-child(12){
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  li:nth-child(6){
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  li:nth-child(3){
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  li:nth-child(9){
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  li:nth-child(1){
+    right: 66px;
+    top: 32px;
+    transform: translateY(-50%);
+  }
+  li:nth-child(2){
+    right: 28px;
+    top: 70px;
+    transform: translateY(-50%);
+  }
+  li:nth-child(5){
+    right: 66px;
+    bottom: 14px;
+    transform: translateY(-50%);
+  }
+  li:nth-child(4){
+    right: 26px;
+    bottom: 50px;
+    transform: translateY(-50%);
+  }
+  li:nth-child(7){
+    left: 65px;
+    bottom: 12px;
+    transform: translateY(-50%);
+  }
+  li:nth-child(8){
+    left: 32px;
+    bottom: 54px;
+    transform: translateY(-50%);
+  }
+  li:nth-child(11){
+    left: 64px;
+    top: 34px;
+    transform: translateY(-50%);
+  }
+  li:nth-child(10){
+    left: 24px;
+    top: 70px;
+    transform: translateY(-50%);
+  }
+}
