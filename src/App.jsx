@@ -4,6 +4,7 @@ import Clock from "./components/Clock/Clock";
 import {Tabs, Tab} from "./components/Tabs/Tabs";
 import tabStyles from "./components/Tabs/Tabs.scss";
 import User from "./components/User/User";
+import Comments from "./components/Comments/Comments";
 
 
 
@@ -19,6 +20,9 @@ const App = () => {
                 </Tab>
                 <Tab label="User">
                     <User/>
+                </Tab>
+                <Tab label="Comments">
+                    <Comments/>
                 </Tab>
             </Tabs>
         </div>
