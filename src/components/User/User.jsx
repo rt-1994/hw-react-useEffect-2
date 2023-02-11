@@ -9,8 +9,6 @@ const User = () => {
     const [picture, setPicture] = useState("")
     const [status, setStatus] = useState(false)
 
-
-
     const loadData = async ()=>{
 
             const response = await fetch("https://randomuser.me/api/?results=1")
